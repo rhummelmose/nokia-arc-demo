@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-nokia-ingress
+  namespace: hello-nokia
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:    
+          serviceName: hello-nokia-svc
+          servicePort: 80
